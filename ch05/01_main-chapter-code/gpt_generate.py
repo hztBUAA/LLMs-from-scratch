@@ -257,7 +257,7 @@ def generate(model, idx, max_new_tokens, context_size, temperature=0.0, top_k=No
 def main(gpt_config, input_prompt, model_size):
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
+    print(device)
     settings, params = download_and_load_gpt2(model_size=model_size, models_dir="gpt2")
 
     gpt = GPTModel(gpt_config)

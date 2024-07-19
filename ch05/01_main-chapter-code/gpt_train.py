@@ -132,7 +132,7 @@ def main(gpt_config, settings):
 
     torch.manual_seed(123)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
+    print(f"using device {device}")
     ##############################
     # Download data if necessary
     ##############################
